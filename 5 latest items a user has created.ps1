@@ -25,9 +25,6 @@ param (
   $ctx.ExecuteQuery()
   $spqQuery = New-Object Microsoft.SharePoint.Client.CamlQuery
 
- # use this line if you want to limit the files to a specific folder 
- # $spqQuery.ViewXml ="<View Scope='RecursiveAll' /><Where><Eq><FieldRef Name='ServerRelativeUrl'/><Value Type='Text'>/Customers/blank</Value></Eq></Where>";
-
   $spqQuery.ViewXml ="<View Scope='RecursiveAll'><Query><OrderBy><FieldRef Name='Created' Ascending='FALSE'/></OrderBy><Where><Eq><FieldRef Name='Editor' /><Value
 Type='User'>"+$UserDisplayName+"</Value></Eq></Where></Query><RowLimit>5</RowLimit></View>";
     
