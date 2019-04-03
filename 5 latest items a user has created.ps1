@@ -30,14 +30,10 @@ param (
 
   $spqQuery.ViewXml ="<View Scope='RecursiveAll'><Query><OrderBy><FieldRef Name='Created' Ascending='FALSE'/></OrderBy><Where><Eq><FieldRef Name='Editor' /><Value
 Type='User'>"+$UserDisplayName+"</Value></Eq></Where></Query><RowLimit>5</RowLimit></View>";
-  
-  
+    
     $items=$ll.GetItems($spqQuery)
     $ctx.Load($items)
     $ctx.ExecuteQuery()
-
-
-
 
   foreach($item in $items)
   {
@@ -63,10 +59,6 @@ Type='User'>"+$UserDisplayName+"</Value></Eq></Where></Query><RowLimit>5</RowLim
 }
 
 
-
-
-
-
 #Paths to SDK
 Add-Type -Path "c:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 Add-Type -Path "c:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
@@ -78,8 +70,6 @@ $username = "ana@etr56.onmicrosoft.com"
 $Url = "https://etr56.sharepoint.com/sites/testflow"
 $ListTitle = "Customers"
 $UserDisplayName = "FR"
-
-
 
 #Do not modify the lines below
 $AdminPassword = Read-Host -Prompt "Enter password" -AsSecureString
