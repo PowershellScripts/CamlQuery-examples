@@ -45,7 +45,7 @@ param (
     $NumberOfItemsInTheList=$maxIndex[0].Id
 
 
-    $itemki=@()
+    $ListItems=@()
     $ViewThreshold=4500
 
 
@@ -68,13 +68,13 @@ param (
 
         foreach($partialItem in $partialItems)
         {
-            $itemki+=$partialItem
+            $ListItems += $partialItem
         }
      }
   
   
 #endregion
-        return $itemki
+        return $ListItems
 
      
 }
