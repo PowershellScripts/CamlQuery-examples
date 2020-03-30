@@ -35,8 +35,6 @@ Type='User'>"+$UserDisplayName+"</Value></Eq></Where></Query><RowLimit>10</RowLi
     $ctx.ExecuteQuery()
 
 
-
-
   foreach($item in $items)
   {
         Write-Host "Processing item no " $item.ID " " -NoNewline
@@ -59,8 +57,6 @@ Type='User'>"+$UserDisplayName+"</Value></Eq></Where></Query><RowLimit>10</RowLi
   Write-Output "Execution finished." 
   $ctx.Dispose()
 }
-
-
 
 
 
