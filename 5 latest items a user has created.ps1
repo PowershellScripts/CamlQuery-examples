@@ -28,9 +28,9 @@ param (
   $spqQuery.ViewXml ="<View Scope='RecursiveAll'><Query><OrderBy><FieldRef Name='Created' Ascending='FALSE'/></OrderBy><Where><Eq><FieldRef Name='Editor' /><Value
 Type='User'>"+$UserDisplayName+"</Value></Eq></Where></Query><RowLimit>5</RowLimit></View>";
     
-    $items=$ll.GetItems($spqQuery)
-    $ctx.Load($items)
-    $ctx.ExecuteQuery()
+  $items=$ll.GetItems($spqQuery)
+  $ctx.Load($items)
+  $ctx.ExecuteQuery()
 
   foreach($item in $items)
   {
